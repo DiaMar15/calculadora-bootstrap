@@ -29,8 +29,7 @@ function calculate() {
     try {
         const result = eval(expression);
         console.log('Resultado de la evaluación:', result);
-        const roundedResult = parseFloat(result.toFixed(2)); // Redondear el resultado a 2 decimales
-        const fullExpression = expression + ' = ' + roundedResult; // Operación completa
+        const fullExpression = expression + ' = ' + result; // Operación completa sin redondeo
         console.log('Operación completa:', fullExpression);
         history.push(fullExpression);
         displayHistory();
