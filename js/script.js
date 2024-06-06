@@ -44,8 +44,7 @@ function calculate() {
         if (isNaN(result) || !isFinite(result)) {
             throw new Error('Error: División por cero o resultado indefinido');
         }
-        // Multiplicar y dividir por 1 para forzar precisión exacta //
-        result = result * 1;
+        
         console.log('Resultado de la evaluación:', result);
         // Construir la operación completa para agregar al historial //
         const fullExpression = expression + ' = ' + result;
@@ -84,5 +83,3 @@ function clearHistory() {
     // Actualizar la lista de historial en la página //
     displayHistory();
 }
-
-
